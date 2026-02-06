@@ -1,0 +1,7 @@
+Name: Bella
+Age: 3 years
+Breed: Labrador Retriever
+
+Name: Max
+Age: 2 years
+Breed: German Shepherd
