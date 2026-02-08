@@ -1,0 +1,40 @@
+Summary
+In this topic, you explored the following concepts:
+
+Authentication and authorization
+
+Authentication is concerned with who or what is requesting access to an AWS account and its associated resources.
+
+After authentication, authorization is concerned with what can be performed in the AWS account and its associated resources.
+
+Identity and Access Management (IAM)
+
+AWS Identity and Access Management (IAM) allows administrators to create and manage users, groups, roles, and permissions, ensuring that each user has the right level of access needed to safely carry out their work. IAM operates on the principle of least privilege, ensuring that users and applications have only the permissions necessary to perform their tasks.
+
+IAM functionality
+
+IAM accounts can be accessed three ways: with a username and password, with multi-factor authentication, and with user access keys. Within an IAM account, there are the following:
+
+•
+Groups, which allow you to specify permissions for similar types of users and then group them together
+
+•
+Roles, which are a temporary way to assign users, applications, or services that normally don't have access to your organization's AWS resources.
+
+Policy Types
+
+AWS supports many types of policies. All these polices are evaluated before a request is either allowed or denied.
+
+To learn more about each policy type, expand each of the following categories.
+
+
+Identity-based policies
+Identity-based policies are managed or inline policies attached to IAM identities (users, groups to which users belong, or roles). They control what actions an identity can perform, on which resources, and under what conditions.
+
+
+Resource-based policies
+These are inline policies that are attached to AWS resources. The most common examples of resource-based policies are S3 bucket policies and IAM role trust policies. Resource-based policies grant permissions to the principal that is specified in the policy. So the principal policy element is required.
+
+
+Permissions boundaries
+A permissions boundary sets the maximum permissions that an identity-based policy can grant to an IAM entity. The entity can perform only the actions that are allowed by both its identity-based policies and its permissions boundaries. Resource-based policies that specify the user or role as the principal are not limited by the permissions boundary. Permission boundary policies restrict permissions for the IAM entity attached to it.
