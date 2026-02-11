@@ -16,6 +16,6 @@ print(pet1.name)
 # Print pet1 object
 print("-----Printing pet1 object-----")
 print(pet1.__dict__)
-#To update the price of pet1, you would use bracket notation, as follows.
+# To update the price of pet1, you would use bracket notation, as follows.
 pet1.__dict__["price"] = 120.0
 print(pet1.price)
