@@ -1,0 +1,108 @@
+Now that you’ve had practice working with Python’s basic syntax, functions, and common data structures, I hope you’re feeling fairly fluent! This topic will focus on some new concepts, but in a way that provides additional context to what you’ve already learned. If you search the internet to find out what Python is, one of the first things you learn is that it’s an object-oriented programming language. Object-oriented programming is a methodology for designing software.
+
+
+A key detail that you might not know is that you’ve been working with objects all along! The term object refers to an abstract data type created by a developer. It can include multiple properties and methods, and might even contain other objects. In most programming languages, objects are defined as classes. Objects in programming are usually modeled after some real-world object.
+
+
+Take a list for example. You’ve worked with lists in Python, and you’ve worked with lists in real life. In both cases, you can perform many of the same functions. You can add or remove items from a list. You could sort your list. Python already knows a lot of the things that you do with a list-type object, and it has specific methods and properties to help you work with it. When you initialize a list in Python, you are creating an instance of that type of object. All your instances share the same basic characteristics and methods, but their unique details belong only to them. But what if you want to model something that doesn’t match an already defined object?
+You can create a new kind of object by defining a new class.
+
+As a side note, the terms class and type are practically synonymous in Python. In practice, people use the term type to refer to Python’s built-in types, like lists, and class to refer to user-defined types.
+
+
+Imagine that you want to represent a bicycle, for example.
+
+What are the characteristics of a bicycle that you would want represented in that object?
+
+- It has two wheels.
+- Usually, bikes are measured by their frame size, so let’s include that.
+- It’s some color.
+
+Let’s get all that into Python.
+
+The syntax to define a class looks a lot like the syntax to define a function. Instead of the def keyword, you use the class keyword. And then you name the class right next to that.
+
+Class names are typically written with capitalized words, so if you have a one-word class like bike, you would capitalize the B. If it’s a class name with two words, like mountain bike, you would capitalize the M and the B. You might also hear this referred to as camel case. But we’re not in the business of making mountain bikes, necessarily, so I can just leave this as Bike.
+
+Underneath that, I will indent the first line and write my first attribute. All those characteristics we recorded are going to be the attributes of the Bike class.
+
+Wheels equals 2.
+Next line:
+Frame size equals 42 inches. I’m writing 42 so that I can treat this as an integer. If I wanted to record 42 inches, I would have to write that information as a string.
+
+
+Next line:
+Color equals red.
+
+
+Great! According to our model, bikes have these characteristics. I can use that class to create a new bike object.
+
+I will end that class definition by going to the next line and using Backspace to unindent. Then, I can create a new bike. This is an instance of the class.
+
+I will call this instance my bike. And similar to when you call a function, you write the name and then open and close parentheses.
+
+I will print out the attributes so that you can see them.
+
+print my_bike.wheels
+print my_bike.frame_size
+print my_bike.color
+
+Run that, and you can see all those attributes I wrote into that class.
+
+I can use this class to create as many bike objects as I want.
+
+Let’s create your_bike and their_bike as additional instances.
+
+When we print out the attributes of your_bike, you can see that it’s exactly the same as mine. Their_bike is also the same.
+
+You can change the values associated with these attributes at the instance level. Let’s say your bike’s frame size is larger than mine, 46 inches.
+
+You can assign that value and see that it’s changed for the your_bike instance. The my_bike instance and the their_bike instance still have the original frame size.
+
+It might be better, though, to build some of these details into the creation of the class. So, let’s look at how we can adjust the class definition so that everyone doesn’t always start with the same bike. That leads us to the init function.
+
+All classes have a function called the init function. It runs whenever a new instance is initiated. This is also called a constructor.
+
+If you want your objects to be initialized with unique attributes, you can define them in the constructor method.
+
+The constructor method belongs to a group called dunder methods. You will learn more about them later. For now, it’s enough to know that they’re written with two underscores on each side, double underscores. Hence, dunder.
+
+And the constructor method in particular attaches or binds attributes to a specific instance.
+
+In the current list of attributes, it looks like I will probably want to adjust this code so that frame size and color are specified for each new instance of the bike. All bikes have two wheels, so I will keep that as a class attribute. Below that, I will start to define my instance attributes.
+
+When you declare methods in a class, you’re actually defining a function specific to that class. So it looks just the same as when you define a function elsewhere in your program, but it’s indented inside the class block.
+
+The constructor method always takes a first parameter, self. Self refers to the instance of the object. You use that parameter to assign attributes to that particular instance. I will place the other two attributes that we want to assign as parameters for the init function.
+
+Then, I will use dot notation to assign these values to the instance.
+
+self.frame_size will be set to whatever you send in as an argument for frame size. self.color will be set to whatever argument you send in for color.
+
+
+Now, if you try to create a new instance without sending in these arguments, you will get an error.
+
+You can fix that by specifying the frame size and color for the my_bike instance. When you create a new instance, like your_bike, you can specify different attributes at the time of creation.
+
+Let’s run this, and you can see that the class attribute stayed the same and the instance attributes hold the specified values.
+
+
+Great! Now you know how to create a class and assign attributes at both the class level and the instance level. Let’s look at how you can assign methods to your objects. Remember, methods are functions that belong to an object.
+
+
+Let’s assume that all our bikes come with a bell, and define a method to ring that bell.
+
+Back in the class definition, I will create another function called ring_bell. ring_bell takes the instance as a parameter. Whether or not you intend to use an instance attribute in your function, you must include the self parameter in the function definition.
+
+I won’t use it for this function. Instead, I will have it print out a ring, ring just so you can see how this works.
+
+
+Again, I will come down out of the class definition. I already have an instance of this object called my_bike. To call this method, I use dot notation. I write:
+
+
+my_bike.ring_bell()
+
+We run that script. And when I inspect the results, I see all my bike attribute details from before and then the method call that delivers that print statement.
+
+
+OK, it’s time for you to get some practice! Use the exercises that follow to review what I’ve just shown you and build your knowledge of object-oriented programming, classes, and objects!
