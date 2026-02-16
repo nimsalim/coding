@@ -417,7 +417,7 @@ class TicTacToeGame:
         # - Return 'Tie' if the board is full with no winner
         # - Return None if the game should continue
         # Note: check_winner() will also set self.game_over and self.winner
-        result = self.check_winner()
+        self.check_winner()
 
         # Step 6: Switch players if the game is not over
         # We only switch if the game is still ongoing

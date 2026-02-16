@@ -399,7 +399,7 @@ class Game:
                 if len(coord) == 2 and coord.isdigit():
                     return coord
                 print("Invalid format! Enter two digits (e.g., '00', '11', '22')")
-            except:
+            except Exception:
                 print("Invalid input! Enter two digits.")
 
     def display_welcome(self):
